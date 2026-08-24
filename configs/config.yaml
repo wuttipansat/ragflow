@@ -1,5 +1,5 @@
 project:
-  name: ReRag
+  name: RAGFlow
   version: 0.1.0
 
 paths:
@@ -12,8 +12,15 @@ ingestion:
   supported_extensions:
     - .pdf
 
-  skep_empty_pages: True
+  skip_empty_pages: True
   save_processed_data: True
+
+cleaning:
+  unicode_form: NFC
+  remove_null_characters: True
+  normalize_spaces: True
+  preserve_paragraphs: True
+  min_text_length: 20
 
 chunking:
   strategy: recursive

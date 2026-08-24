@@ -1,10 +1,11 @@
 from pathlib import Path
 from typing import Any
+from functools import lru_cache
 
 import yaml
 from dotenv import load_dotenv
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_CONFIG_PATH = PROJECT_ROOT / "configs" / "config.yaml"
 
 load_dotenv(PROJECT_ROOT / ".env")
@@ -33,6 +34,11 @@ def load_config(
         )
 
     return config
+
+@lru_cache(maxsize=1)
+def get_config() -> dict[str, Any]:
+    """Return cache application configuration."""
+    return load_config(DEFAULT_CONFIG_PATH)
 
 def resolve_path(path: str | Path) -> Path:
     """Convert a configured relative path to an absolute path."""
