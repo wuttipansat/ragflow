@@ -2,6 +2,7 @@ from ragflow.config.config import get_config, resolve_path
 from ragflow.ingestion.loader import load_pdf
 from ragflow.ingestion.cleaner import clean_pages
 from ragflow.ingestion.chunker import chunk_pages
+from ragflow.ingestion.writer import save_chunks
 
 def main() -> None:
 
@@ -25,6 +26,15 @@ def main() -> None:
     print(f"Loaded pages: {len(pages)}")
     print(f"Cleaned pages: {len(cleaned_pages)}")
     print(f"Created chunks: {len(chunks)}")
+
+    if ingestion_config["save_processed_data"]:
+        processed_data_dir = resolve_path(config["paths"]["processed_data"])
+
+        output_path = processed_data_dir / f"{pdf_path.stem}_chunks.json"
+
+        saved_path = save_chunks(chunks=chunks, output_path=output_path)
+
+        print(f"Saved to: {saved_path}")
 
     for chunk in chunks[:10]:    
         metadata = chunk["metadata"]
