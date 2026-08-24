@@ -23,16 +23,11 @@ cleaning:
   min_text_length: 20
 
 chunking:
-  strategy: recursive
+  strategy: character
   chunk_size: 800
   chunk_overlap: 150
-  separators:
-  - "\n\n"
-  - "\n"
-  - ". "
-  - " "
-  - ""
-
+  min_chunk_size: 50
+  
 embedding:
   provider: sentence_transformers
   model_name: intfloat/multilingual-e5-base
