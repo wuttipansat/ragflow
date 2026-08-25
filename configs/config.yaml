@@ -32,8 +32,8 @@ embedding:
   provider: sentence_transformers
   model_name: intfloat/multilingual-e5-base
   device: cpu
-  batch_size: 32
-  normalize_embedding: true
+  batch_size: 16
+  normalize_embedding: True
   document_prefix: "passage: "
   query_prefix: "query: "
 
