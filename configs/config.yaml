@@ -43,8 +43,8 @@ vector_store:
   distance_metric: cosine
 
 retrieval:
-  top_k: 5
-  score_threshold: null
+  top_k: 3
+  minimum_similarity: 0.30
 
 logging:
   level: INFO
