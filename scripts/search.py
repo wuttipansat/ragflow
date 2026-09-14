@@ -12,7 +12,7 @@ def main() -> None:
     query_embedding = embedding_model.embed_query(query)
 
     vector_store = ChromaVectorStore(
-        presist_directory=resolve_path(config["paths"]["vector_store"]),
+        persist_directory=resolve_path(config["paths"]["vector_store"]),
         collection_name=config["vector_store"]["collection_name"],
         distance_metric=config["vector_store"]["distance_metric"],
     )

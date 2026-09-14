@@ -16,6 +16,8 @@ dependencies = [
     "sentence-transformers",
     "numpy",
     "chromadb",
+    "requests",
+    "python-dotenv",
 ]
 
 [project.optional-dependencies]

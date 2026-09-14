@@ -28,7 +28,7 @@ def main() -> None:
     embeddings = embedding_model.embed_documents(texts)
 
     vector_store = ChromaVectorStore(
-        presist_directory=vector_store_dir,
+        persist_directory=vector_store_dir,
         collection_name=config["vector_store"]["collection_name"],
         distance_metric=config["vector_store"]["distance_metric"],
     )
