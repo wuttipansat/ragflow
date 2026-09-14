@@ -5,7 +5,7 @@ project:
 paths:
   raw_data: data/raw
   processed_data: data/processed
-  vector_store: storage/chroma
+  vector_store: data/vector_store
   evaluation_data: data/evaluation
 
 ingestion:
@@ -41,7 +41,6 @@ vector_store:
   provider: chroma
   collection_name: documents
   distance_metric: cosine
-  persist_directory: storage/chroma
 
 retrieval:
   top_k: 5
