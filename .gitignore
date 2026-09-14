@@ -11,6 +11,7 @@ __pycache__/
 
 data/raw/*
 data/processed/*
+data/vector_store/*
 
 !data/raw/.gitkeep
 !data/processed/.gitkeep
