@@ -9,7 +9,6 @@ __pycache__/
 
 .env
 
-data/raw/*
 data/processed/*
 data/vector_store/*
 
