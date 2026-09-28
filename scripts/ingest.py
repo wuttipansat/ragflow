@@ -18,7 +18,7 @@ def main() -> None:
 
 
     pdf_path = raw_data_dir / "sample.pdf"
-    pages = load_pdf(pdf_path, supported_extensions=ingestion_config["supported_extensions"], skip_empty=ingestion_config['skip_empty_pages'])
+    pages = load_pdf(pdf_path, supported_extensions=ingestion_config["supported_extensions"], skip_empty_pages=ingestion_config['skip_empty_pages'])
     cleaned_pages = clean_pages(pages=pages, cleaning_config=cleaning_config)
     chunks = chunk_pages(pages=cleaned_pages, chunking_config=chunking_config,)
 
