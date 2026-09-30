@@ -35,6 +35,7 @@ def main() -> None:
         print(f"Similarity: {similarity:.4f}")
         print(f"File: {metadata['filename']}")
         print(f"Page: {metadata['page']}")
+        print(f"Content type: {metadata['content_type']}")
         print(f"Text: {document[:300]}")
 
 if __name__ == "__main__":
