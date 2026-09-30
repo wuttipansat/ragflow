@@ -49,16 +49,11 @@ class ChromaVectorStore:
         )
 
     def search(
-            self,
-            query_embedding: Any,
-            top_k: int = 3,
-    ) -> dict[str, Any]:
-        """Search for chunks closest to the query embedding."""
-
-        if top_k <= 0:
-            raise ValueError("top_k must be greater than 0.")
-
-        return self.collection.query(
+        self,
+        query_embedding,
+        top_k: int = 5,
+    ) -> list[dict]:
+        query_result = self.collection.query(
             query_embeddings=[
                 query_embedding.tolist()
             ],
@@ -66,9 +61,36 @@ class ChromaVectorStore:
             include=[
                 "documents",
                 "metadatas",
-                "distances"
-            ]
+                "distances",
+            ],
         )
+
+        ids = query_result["ids"][0]
+        documents = query_result["documents"][0]
+        metadatas = query_result["metadatas"][0]
+        distances = query_result["distances"][0]
+
+        results = []
+
+        for chunk_id, text, metadata, distance in zip(
+            ids,
+            documents,
+            metadatas,
+            distances,
+        ):
+            distance = float(distance)
+
+            results.append(
+                {
+                    "id": chunk_id,
+                    "text": text,
+                    "metadata": metadata or {},
+                    "distance": distance,
+                    "similarity": 1.0 - distance,
+                }
+            )
+
+        return results
 
     @staticmethod
     def _prepare_metadata(

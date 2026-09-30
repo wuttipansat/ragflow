@@ -100,9 +100,12 @@ def main() -> None:
 
         print(
             f"[Source {index}] "
-            f"{metadata.get('filename', 'unknown')}, "
-            f"page {metadata.get('page', 'unknown')}, "
-            f"similarity={chunk['similarity']:.4f}"
+            f"Chunk ID: {chunk.get('id', 'unknown')} | "
+            f"Content type: "
+            f"{metadata.get('content_type', 'text')} | "
+            f"File: {metadata.get('filename', 'unknown')} | "
+            f"Page: {metadata.get('page', 'unknown')} | "
+            f"Similarity: {chunk['similarity']:.4f}"
         )
 
 

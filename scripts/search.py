@@ -5,7 +5,7 @@ from ragflow.retrieval.vector_store import ChromaVectorStore
 def main() -> None:
     config = get_config()
 
-    query = "What is amount of housing allocation?"
+    query = "What is the amount allocated to housing?"
 
     embedding_model = create_embedding_model(config["embedding"])
 
@@ -21,22 +21,17 @@ def main() -> None:
         query_embedding=query_embedding,
     )
 
-    for index, document in enumerate(
-        results["documents"][0],
-        start=1,
-    ):
-        distance = results["distances"][0][index - 1]
-        metadata = results["metadatas"][0][index - 1]
+    for index, result in enumerate(results, start=1):
 
-        similarity = 1 - distance
+        metadata = result.get("metadata") or {}
 
         print()
         print(f"Rank: {index}")
-        print(f"Similarity: {similarity:.4f}")
+        print(f"Similarity: {result['similarity']:.4f}")
         print(f"File: {metadata['filename']}")
         print(f"Page: {metadata['page']}")
         print(f"Content type: {metadata['content_type']}")
-        print(f"Text: {document[:300]}")
+        print(f"Text: {result['text'][:300]}")
 
 if __name__ == "__main__":
     main()

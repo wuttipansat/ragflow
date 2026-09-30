@@ -1,0 +1,240 @@
+[
+  {
+    "id": "text-001",
+    "question": "What is the purpose of the Personal Finance Blueprint?",
+    "expected_page": 1,
+    "expected_content_type": "text",
+    "answer_keywords": [
+      "budget",
+      "emergency",
+      "debt",
+      "invest"
+    ]
+  },
+  {
+    "id": "text-002",
+    "question": "What is the illustrative household net worth?",
+    "expected_page": 2,
+    "expected_content_type": "text",
+    "answer_keywords": [
+      "220,000",
+      "baht"
+    ]
+  },
+  {
+    "id": "text-003",
+    "question": "What are the total assets and total liabilities?",
+    "expected_page": 2,
+    "expected_content_type": "text",
+    "answer_keywords": [
+      "575,000",
+      "355,000"
+    ]
+  },
+  {
+    "id": "text-004",
+    "question": "How are short-term, medium-term, and long-term financial goals defined?",
+    "expected_page": 2,
+    "expected_content_type": "text",
+    "answer_keywords": [
+      "12 months",
+      "one to five years",
+      "more than five years"
+    ]
+  },
+  {
+    "id": "text-005",
+    "question": "What is the monthly take-home income in the budget example?",
+    "expected_page": 3,
+    "expected_content_type": "text",
+    "answer_keywords": [
+      "50,000",
+      "baht"
+    ]
+  },
+  {
+    "id": "text-006",
+    "question": "What types of unexpected events should an emergency fund cover?",
+    "expected_page": 4,
+    "expected_content_type": "text",
+    "answer_keywords": [
+      "income loss",
+      "medical",
+      "home repairs"
+    ]
+  },
+  {
+    "id": "text-007",
+    "question": "What financial topics should be discussed before selecting a strategy?",
+    "expected_page": 5,
+    "expected_content_type": "text",
+    "answer_keywords": [
+      "income",
+      "bills",
+      "debt",
+      "savings",
+      "housing goals",
+      "risk preferences"
+    ]
+  },
+  {
+    "id": "text-008",
+    "question": "What is the difference between the avalanche and snowball debt repayment methods?",
+    "expected_page": 6,
+    "expected_content_type": "text",
+    "answer_keywords": [
+      "highest interest rate",
+      "smallest balance"
+    ]
+  },
+  {
+    "id": "text-009",
+    "question": "Which debt has the highest interest rate?",
+    "expected_page": 6,
+    "expected_content_type": "text",
+    "answer_keywords": [
+      "credit card",
+      "18%"
+    ]
+  },
+  {
+    "id": "text-010",
+    "question": "What factors should determine an investor's asset allocation?",
+    "expected_page": 7,
+    "expected_content_type": "text",
+    "answer_keywords": [
+      "time horizon",
+      "losses",
+      "withdrawals"
+    ]
+  },
+  {
+    "id": "text-011",
+    "question": "What actions should be taken during months five and six?",
+    "expected_page": 8,
+    "expected_content_type": "text",
+    "answer_keywords": [
+      "high-interest debt",
+      "recurring costs"
+    ]
+  },
+  {
+    "id": "text-012",
+    "question": "What items are included in the final financial checklist?",
+    "expected_page": 8,
+    "expected_content_type": "text",
+    "answer_keywords": [
+      "spending",
+      "emergency savings",
+      "debt",
+      "insurance",
+      "investment"
+    ]
+  },
+  {
+    "id": "image-001",
+    "question": "According to the monthly allocation chart, how much is allocated to housing and savings?",
+    "expected_page": 3,
+    "expected_content_type": "image",
+    "answer_keywords": [
+      "housing",
+      "15,000",
+      "savings",
+      "12,000"
+    ]
+  },
+  {
+    "id": "image-002",
+    "question": "Which budget category has the smallest monthly allocation in the chart?",
+    "expected_page": 3,
+    "expected_content_type": "image",
+    "answer_keywords": [
+      "insurance",
+      "3,500"
+    ]
+  },
+  {
+    "id": "image-003",
+    "question": "In which month does the emergency fund first exceed the target of 78,000 baht?",
+    "expected_page": 4,
+    "expected_content_type": "image",
+    "answer_keywords": [
+      "month 11",
+      "81,000"
+    ]
+  },
+  {
+    "id": "image-004",
+    "question": "What objects are visible in the financial planning meeting?",
+    "expected_page": 5,
+    "expected_content_type": "image",
+    "answer_keywords": [
+      "laptop",
+      "calculator",
+      "documents",
+      "money",
+      "model house",
+      "savings jar"
+    ]
+  },
+  {
+    "id": "image-005",
+    "question": "Who is participating in the financial planning discussion shown in the image?",
+    "expected_page": 5,
+    "expected_content_type": "image",
+    "answer_keywords": [
+      "financial adviser",
+      "client"
+    ]
+  },
+  {
+    "id": "image-006",
+    "question": "Which debt repayment strategy reaches a zero balance first?",
+    "expected_page": 6,
+    "expected_content_type": "image",
+    "answer_keywords": [
+      "accelerated payment",
+      "month 20"
+    ]
+  },
+  {
+    "id": "image-007",
+    "question": "How much debt remains under the standard payment plan after 24 months?",
+    "expected_page": 6,
+    "expected_content_type": "image",
+    "answer_keywords": [
+      "33,600"
+    ]
+  },
+  {
+    "id": "image-008",
+    "question": "What percentage of the portfolio is allocated to global equity?",
+    "expected_page": 7,
+    "expected_content_type": "image",
+    "answer_keywords": [
+      "global equity",
+      "40%"
+    ]
+  },
+  {
+    "id": "image-009",
+    "question": "Which asset class has the smallest allocation in the portfolio chart?",
+    "expected_page": 7,
+    "expected_content_type": "image",
+    "answer_keywords": [
+      "cash",
+      "5%"
+    ]
+  },
+  {
+    "id": "image-010",
+    "question": "What percentage of the portfolio is allocated to bonds in total?",
+    "expected_page": 7,
+    "expected_content_type": "image",
+    "answer_keywords": [
+      "government bonds",
+      "corporate bonds",
+      "40%"
+    ]
+  }
+]
