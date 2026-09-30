@@ -5,7 +5,7 @@ from ragflow.retrieval.vector_store import ChromaVectorStore
 def main() -> None:
     config = get_config()
 
-    query = "What are his computer vision skills?"
+    query = "What is amount of housing allocation?"
 
     embedding_model = create_embedding_model(config["embedding"])
 

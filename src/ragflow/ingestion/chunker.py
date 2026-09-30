@@ -123,6 +123,7 @@ def chunk_pages(
                     "chunk_id": chunk_id,
                     "chunk_index": chunk_index,
                     "character_count": len(chunk_text),
+                    "content_type": "text"
                 }
             )
 

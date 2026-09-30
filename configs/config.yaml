@@ -15,6 +15,16 @@ ingestion:
   skip_empty_pages: True
   save_processed_data: True
 
+image_processing:
+  enabled: True
+  output_directory: data/processed/images
+  minimum_width: 200
+  minimum_height: 200
+  vision_model: dots-studio/dots-3-note-preview:free
+  timeout_seconds: 120
+  max_tokens: 1000
+  use_cache: True
+
 cleaning:
   unicode_form: NFC
   remove_null_characters: True
